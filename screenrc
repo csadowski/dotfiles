@@ -1,0 +1,10 @@
+term screen-256color
+defutf8 on
+nethack on
+vbell off
+startup_message off
+caption string "%?%F%{= Bk}%? %C%A %D %d-%m-%Y %{= kB} %t%= %?%F%{= Bk}%:%{= wk}%? %n "
+hardstatus alwayslastline
+hardstatus string '%{= g}[ %{g}%H %{g}][%= %{w}%?%-Lw%?%{=b R}(%{W}%n*%f %t%?(%u)%?%{=b R})%{= w}%?%+Lw%?%?%= %{g}]%{=y C}[%D %d/%m/%y %c]%{W}'
+#blankerprg asciiquarium
+#idle 300 blanker
