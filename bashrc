@@ -138,9 +138,8 @@ fi
 #alias ll='ls -l'
 #alias la='ls -A'
 #alias l='ls -CF'
-#alias facetweet='php "/usr/local/lib/fbcmd/fbcmd.php" status $1 -col=$(tput cols) && twidge update $1'
+alias bc='bc -l'
 alias upgrade='sudo apt-get update ; sudo apt-get upgrade'
-alias zupgrade='cd /home/cory/Downloads/Source/ZDoomSVN/trunk && svn up && cd release && rm -rf * && cmake -DCMAKE_BUILD_TYPE=Release -DFMOD_LIBRARY=/usr/local/lib/libfmodex64-4.28.07.so .. && make -j 2 ; cd ../../../GZDoomSVN/trunk && svn up && cd release && rm -rf * && cmake -DCMAKE_BUILD_TYPE=Release -DFMOD_LIBRARY=/usr/local/lib/libfmodex64-4.28.07.so .. && make -j 2 ; notify-send ZUpgrade "(G)ZDoom SVN updates complete"'
 alias whatismyip='curl -s "http://checkip.dyndns.org" | sed "s/.*Current IP Address: \([0-9\.]*\).*/\1/g"'
 alias randomfact='wget randomfunfacts.com -O - 2>/dev/null | grep \<strong\> | sed "s;^.*<i>\(.*\)</i>.*$;\1;"'
 alias rhombus='kevedit /home/cory/.wine/drive_c/DOS/ZZT/RHOMBUS'
@@ -168,6 +167,10 @@ export GPG_TTY=$(tty)
 if [[ ! -n "$SUDO_USER" ]]; then
     eval $(keychain --eval --quiet id_rsa)
 fi
+
+# Run local file if it exists.
+[[ -e "${HOME}/.bashrc.local" ]] && source "${HOME}/.bashrc.local"
+
 echo
 verse
 echo
@@ -180,7 +183,3 @@ echo
 # Sets the Mail Environment Variable
 #MAIL=/var/spool/mail/cory && export MAIL
 MAILPATH=~/mail/inbox:~/mail/student-mail:~/mail/ubuntu-power-users && export MAIL
-export ETERNITYBASE='~/.eternity/base'
-export SDL_NOMOUSE=0
-export SDL_VIDEO_FULLSCREEN_HEAD=0
-export QT_PLUGIN_PATH=/home/cory/.kde4/lib/kde4/plugins:/usr/lib/kde4/plugins
