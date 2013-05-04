@@ -1,3 +1,8 @@
 let g:netrw_dirhistmax  =10
-let g:netrw_dirhist_cnt =1
+let g:netrw_dirhist_cnt =6
 let g:netrw_dirhist_1='/home/cory/.vim'
+let g:netrw_dirhist_2='/opt/lampp/htdocs/vidyacom/app/views/games'
+let g:netrw_dirhist_3='/usr/lib/bitlbee'
+let g:netrw_dirhist_4='/usr/lib'
+let g:netrw_dirhist_5='/home/cory/.config/awesome'
+let g:netrw_dirhist_6='/home/cory/.dotfiles/.git'
