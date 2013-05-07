@@ -33,8 +33,7 @@ autocmd InsertLeave * :setlocal hlsearch
 cmap w!! w !sudo tee >/dev/null %
 " Formatting
 set expandtab
-"set formatoptions=croqn2 
-"set formatoptions=atcroqn2
+set autoindent
 silent! set formatoptions+=j
 set smarttab
 set nojoinspaces
