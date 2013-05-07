@@ -1,0 +1,67 @@
+! Cursor
+Xcursor.theme: DMZ-Black
+! Fonts
+Xft.antialias: 1
+Xft.hinting: -1
+Xft.hintstyle: hintnone
+Xft.rgba: none
+
+! Common terminal colors
+*.background: #000000
+*.foreground: #AAAAAA
+*.color0: #000000
+*.color1: #AA0000
+*.color2: #00aa00
+*.color3: #AA5500
+*.color4: #0000AA
+*.color5: #AA00AA
+*.color6: #00AAAA
+*.color7: #AAAAAA
+*.color8: #555555
+*.color9: #FF5555
+*.color10: #55FF55
+*.color11: #FFFF55
+*.color12: #5555FF
+*.color13: #FF55FF
+*.color14: #55FFFF
+*.color15: #FFFFFF
+
+! Urxvt
+URxvt.termName: rxvt-256color
+URxvt.buffered: false
+URxvt.cursorBlink: on
+!depth and background are for transparency
+URxvt.depth: 32
+!URxvt.background: rgba:0000/0000/0200/c800
+!URxvt.fading: 40
+URxvt.font: xft:Ubuntu Mono:size=12:antialias=true:hinting=true, xft:Deja Vu Sans Mono,xft:Lohit Kannada
+URxvt.internalBorder: 0
+URxvt.iso14755: false
+URxvt.iso14755_52: false
+URxvt.pointerBlank: true
+URxvt.saveLines: 10000
+URxvt.scrollBar: false
+URxvt.scrollTTyKeypress: true
+URxvt.scrollTTyOutput: false
+URxvt.secondaryScroll: true
+URxvt.skipBuiltinGlyphs: true
+URxvt.urgentOnBell: true
+!fake transparency below
+URxvt.transparent: true
+URxvt.shading: 30
+! Enable clicking links to open them
+URxvt.perl-ext-common: default,matcher,-option-popup,-selection-popup,-realine
+URxvt.matcher.button: 1
+URxvt.urlLauncher: chromium-browser
+! Fix ibus; remember to start with --xim
+URxvt.inputMethod: ibus
+URxvt.preeditType: OverTheSpot
+! yeahconsole stuff
+yeahconsole.term: urxvtc
+yeahconsole.screenWidth: 1280
+! guake was big enough to show 31 vim lines, albeit with a bigger font; 34 is half the screen at this font
+yeahconsole.consoleHeight: 34
+yeahconsole.xOffset: 1280
+yeahconsole.toggleKey: None+F12
+yeahconsole.keyFull: None+F11
+yeahconsole.restart: 1
