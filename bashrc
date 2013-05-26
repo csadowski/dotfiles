@@ -45,9 +45,9 @@ shopt -s cdspell
 # zsh-style cd string replacement
 function cd {
     if [[ -n "$2" ]]; then
-        builtin cd ${PWD/$1/$2}
+        builtin cd "${PWD/$1/$2}"
     else
-        builtin cd $*
+        builtin cd "$*"
     fi
 }
 
