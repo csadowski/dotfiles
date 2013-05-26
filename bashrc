@@ -42,6 +42,15 @@ export GREP_OPTIONS
 # Tolerate typos when changing directories
 shopt -s cdspell
 
+# zsh-style cd string replacement
+function cd {
+    if [[ -n "$2" ]]; then
+        builtin cd ${PWD/$1/$2}
+    else
+        builtin cd $*
+    fi
+}
+
 # Make tab-completion ignore case and complete for underscores/hyphens
 set completion-ignore-case on
 set completion-map-case on
