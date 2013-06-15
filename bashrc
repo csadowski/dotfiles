@@ -51,10 +51,6 @@ function cd {
     fi
 }
 
-# Make tab-completion ignore case and complete for underscores/hyphens
-set completion-ignore-case on
-set completion-map-case on
-
 # Bash bookmarking script
 source ~/Downloads/Source/bashmarks/bashmarks.sh
 
