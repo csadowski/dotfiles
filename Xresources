@@ -52,7 +52,11 @@ URxvt.shading: 30
 ! Enable clicking links to open them
 URxvt.perl-ext-common: default,matcher,-option-popup,-selection-popup,-realine
 URxvt.matcher.button: 1
-URxvt.urlLauncher: chromium-browser
+!URxvt.urlLauncher: chromium-browser
+URxvt.matcher.pattern.1: \\bwww\\.[\\w-]\\.[\\w./?&@#-]*[\\w/-]
+URxvt.matcher.launcher.1: chromium-browser 
+URxvt.matcher.pattern.2: \\bwww\\.youtube\\.com/\\S*
+URxvt.matcher.launcher.2: smplayer 
 ! Fix ibus; remember to start with --xim
 URxvt.inputMethod: ibus
 URxvt.preeditType: OverTheSpot
