@@ -11,9 +11,6 @@ export HISTCONTROL=$HISTCONTROL${HISTCONTROL+,}ignoredups
 # ... or force ignoredups and ignorespace
 export HISTCONTROL=ignoreboth
 
-# Use less as my pager if available.
-hash less &>/dev/null && export PAGER=less
-
 # append to the history file, don't overwrite it
 shopt -s histappend
 
@@ -194,6 +191,3 @@ birthday
 echo
 calcurse -t
 echo
-# Sets the Mail Environment Variable
-#MAIL=/var/spool/mail/cory && export MAIL
-MAILPATH=~/mail/inbox:~/mail/student-mail:~/mail/ubuntu-power-users && export MAIL
