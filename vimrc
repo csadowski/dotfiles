@@ -20,7 +20,26 @@ set incsearch
 set hlsearch
 set linebreak
 set backupdir=~/.vim/backup
+set backupskip+=*/shm/*
 set directory=~/.vim/swap
+" Don't swap sensitive files
+    if has('autocmd')
+        augroup swapskip
+            autocmd!
+            silent! autocmd BufNewFile,BufReadPre
+                \ /tmp/*,$TMPDIR/*,$TMP/*,$TEMP/*,*/shm/*
+                \ setlocal noswapfile
+        augroup END
+    endif
+" Don't track changes to sensitive files
+    if has('autocmd')
+        augroup undoskip
+            autocmd!
+            silent! autocmd BufWritePre
+                \ /tmp/*,$TMPDIR/*,$TMP/*,$TEMP/*,*/shm/*
+                \ setlocal noundofile
+        augroup END
+    endif
 set smartcase
 set splitbelow
 set splitright
