@@ -50,6 +50,18 @@ nnoremap <leader>h :set hlsearch!<CR>
 autocmd InsertEnter * :setlocal nohlsearch
 autocmd InsertLeave * :setlocal hlsearch
 cmap w!! w !sudo tee >/dev/null %
+" Typos
+if has('user_commands')
+    command! -bang -complete=file -nargs=? E e<bang> <args>
+    command! -bang -complete=file -nargs=? W w<bang> <args>
+    command! -bang -complete=file -nargs=? WQ wq<bang> <args>
+    command! -bang -complete=file -nargs=? Wq wq<bang> <args>
+    command! -bang Q q<bang>
+    command! -bang Qa qa<bang>
+    command! -bang QA qa<bang>
+    command! -bang Wa wa<bang>
+    command! -bang WA wa<bang>
+endif
 " Formatting
 set expandtab
 set autoindent
