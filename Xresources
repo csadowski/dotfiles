@@ -51,12 +51,18 @@ URxvt.transparent: true
 URxvt.shading: 30
 ! Enable clicking links to open them
 URxvt.perl-ext-common: default,matcher,-option-popup,-selection-popup,-realine
-URxvt.matcher.button: 1
-!URxvt.urlLauncher: chromium-browser
-URxvt.matcher.pattern.1: \\bwww\\.[\\w-]\\.[\\w./?&@#-]*[\\w/-]
-URxvt.matcher.launcher.1: chromium-browser 
-URxvt.matcher.pattern.2: \\bwww\\.youtube\\.com/\\S*
+URxvt.matcher.button: 2
+URxvt.urlLauncher: firefox
+URxvt.matcher.pattern.1: \\b(mailto:)[\\w\-\@;\/?:&=%\$_.+!*\x27(),~#]+ [\\w\-\@;\/?:&=%\$_+!*\x27()~]
+URxvt.matcher.launcher.1: urxvt -e mutt $0
+URxvt.matcher.pattern.2: \\bhttps?:\/\/(?:(?:www.youtube|youtube).com\/watch\\?.*v=|youtu.be/)([\\w-]*)
 URxvt.matcher.launcher.2: smplayer 
+URxvt.matcher.pattern.3: \\bhttps?:\/\/[\\w-.]*\/[\\w./?&%@#-]*.(?i)(mp3|ogg|wav|wma|flv)
+URxvt.matcher.launcher.3: smplayer
+URxvt.matcher.pattern.4: \\bhttps?:\/\/[\\w-.]*\/[\\w./?&%@#-]*.(?i)(jpg|jpeg|png|gif|bmp)
+URxvt.matcher.launcher.4: animate
+URxvt.matcher.pattern.5:  \\B(/\\S+?):(\\d+)(?=:|$)
+URxvt.matcher.launcher.5: gvim +$2 $1
 ! Fix ibus; remember to start with --xim
 URxvt.inputMethod: ibus
 URxvt.preeditType: OverTheSpot
