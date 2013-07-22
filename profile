@@ -34,10 +34,13 @@ MAILPATH=~/mail/inbox:~/mail/student-mail:~/mail/ubuntu-power-users && export MA
 
 # Browser
 if [ -n "$DISPLAY" ]; then
-    export BROWSER='chromium-browser'
+    export BROWSER='firefox'
 else
     export BROWSER='w3m'
 fi
 
 # Tree
 export TREE_CHARSET='utf-8'
+
+# Jerkcity fortunes
+# [ -t 0 ] && fortune ~/.local/share/games/fortunes
