@@ -7,23 +7,41 @@ Xft.hintstyle: hintnone
 Xft.rgba: none
 
 ! Common terminal colors
+! black
 *.background: #000000
+! light grey
 *.foreground: #AAAAAA
+! black
 *.color0: #000000
+! dark red
 *.color1: #AA0000
+! dark green
 *.color2: #00aa00
+! brown/dark yellow
 *.color3: #AA5500
+! dark blue
 *.color4: #0000AA
+! dark purple
 *.color5: #AA00AA
+! dark cyan
 *.color6: #00AAAA
+! light grey
 *.color7: #AAAAAA
+! dark grey
 *.color8: #555555
+! light red
 *.color9: #FF5555
+! light green
 *.color10: #55FF55
+! light yellow
 *.color11: #FFFF55
+! light blue
 *.color12: #5555FF
+! light purple
 *.color13: #FF55FF
+! light cyan
 *.color14: #55FFFF
+! white
 *.color15: #FFFFFF
 
 ! Urxvt
@@ -75,3 +93,28 @@ yeahconsole.xOffset: 1280
 yeahconsole.toggleKey: None+F12
 yeahconsole.keyFull: None+F11
 yeahconsole.restart: 1
+! xscreensaver settings
+xscreensaver.Dialog.headingFont:            -*-ubuntu-bold-r-*-*-12-*-*-*-*-*-*-*
+xscreensaver.Dialog.bodyFont:               -*-ubuntu-medium-r-*-*-12-*-*-*-*-*-*-*
+xscreensaver.Dialog.labelFont:              -*-ubuntu-medium-r-*-*-12-*-*-*-*-*-*-*
+xscreensaver.Dialog.unameFont:              -*-ubuntu-medium-r-*-*-12-*-*-*-*-*-*-*
+xscreensaver.Dialog.buttonFont:             -*-ubuntu-bold-r-*-*-12-*-*-*-*-*-*-*
+xscreensaver.Dialog.dateFont:               -*-ubuntu-medium-r-*-*-12-*-*-*-*-*-*-*
+xscreensaver.passwd.passwdFont:             -*-ubuntu-bold-r-*-*-12-*-*-*-*-*-*-*
+xscreensaver.Dialog.foreground:             #dddddd
+xscreensaver.Dialog.background:             #222222
+xscreensaver.Dialog.topShadowColor:         #222222
+xscreensaver.Dialog.bottomShadowColor:      #222222
+xscreensaver.Dialog.Button.foreground:      #ffffff
+xscreensaver.Dialog.Button.background:      #3f3f3f
+xscreensaver.Dialog.text.foreground:        #ffffff
+xscreensaver.Dialog.text.background:        #3f3f3f
+xscreensaver.Dialog.internalBorderWidth:    45
+!xscreensaver.Dialog.borderWidth:            15
+xscreensaver.Dialog.shadowThickness:        2
+xscreensaver.Dialog.logo.width:             0
+xscreensaver.Dialog.logo.height:            0
+xscreensaver.passwd.thermometer.foreground: #535d6c
+xscreensaver.passwd.thermometer.background: #000000
+xscreensaver.passwd.thermometer.width:      12
+!xscreensaver.dateFormat:                    %I:%M%P %a %b %d, %Y
