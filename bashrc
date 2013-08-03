@@ -164,6 +164,8 @@ alias randomfact='wget randomfunfacts.com -O - 2>/dev/null | grep \<strong\> | s
 alias rhombus='kevedit /home/cory/.wine/drive_c/DOS/ZZT/RHOMBUS'
 alias cmdstats='history | awk "{print $2}" | sort | uniq -c | sort -rn | head -10'
 alias vcstimeFix='sudo ln -s /dev/vcsa /dev/vcsa0 && sudo ln -s /dev/vcs /dev/vcs0 && echo "vcstime ready for action"'
+function samediff { diff --unchanged-group-format="@@ %dn,%df%c'\012'%<" --old-group-format='' --new-group-format='' --changed-group-format='' "$1" "$2";}
+function samecat { cat $1 | grep -Fxf $2 ;}
 function vim-writer { vim -c 'set tw=72 et' '+/^$' --cmd 'set spell spelllang=en_gb' -c 'set formatoptions+=aw' "$@" ;}
 function gvim-writer { gvim -c 'set tw=72 et' '+/^$' --cmd 'set spell spelllang=en_gb' -c 'set formatoptions+=aw' "$@" ;}
 # Attach to existing tmux session rather than create a new one if possible.
