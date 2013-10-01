@@ -89,7 +89,7 @@ yeahconsole.term: urxvtc
 yeahconsole.screenWidth: 1280
 ! guake was big enough to show 31 vim lines, albeit with a bigger font; 34 is half the screen at this font
 yeahconsole.consoleHeight: 34
-yeahconsole.xOffset: 1280
+! yeahconsole.xOffset: 1280
 yeahconsole.toggleKey: None+F12
 yeahconsole.keyFull: None+F11
 yeahconsole.restart: 1
