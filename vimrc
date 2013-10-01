@@ -50,6 +50,10 @@ nnoremap <leader>h :set hlsearch!<CR>
 autocmd InsertEnter * :setlocal nohlsearch
 autocmd InsertLeave * :setlocal hlsearch
 cmap w!! w !sudo tee >/dev/null %
+" compile and run current buffer (C/C++)
+map <F8> :w <CR> :!g++ -Wall -O % -o %< && ./%< <CR>
+" compile all buffers, but don't run them (C/C++)
+map <ESC><F8> :wa <CR> :silent bufdo !g++ -Wall -O % -o %< <CR> <C-L>
 " Typos
 if has('user_commands')
     command! -bang -complete=file -nargs=? E e<bang> <args>
@@ -65,7 +69,11 @@ endif
 " Formatting
 set expandtab
 set autoindent
-silent! set formatoptions+=j
+" If we have Vim 7.4, add j to the format options to get rid of comment
+" leaders when joining lines
+if v:version >= 704
+    set formatoptions+=j
+endif
 set smarttab
 set nojoinspaces
 set shiftround
@@ -80,3 +88,10 @@ set grepprg=grep\ -nH\ $*
 let g:tex_flavor='latex'
 let g:Tex_DefaultTargetFormat = 'pdf'
 let g:Tex_MultipleCompileFormats='pdf, aux'
+" vundle stuff
+set rtp+=~/.vim/bundle/vundle/
+call vundle#rc()
+" let Vundle manage Vundle
+Bundle 'gmarik/vundle'
+" YouCompleteMe repo
+Bundle 'Valloric/YouCompleteMe'
