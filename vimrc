@@ -54,6 +54,8 @@ cmap w!! w !sudo tee >/dev/null %
 map <F8> :w <CR> :!g++ -Wall -O % -o %< && ./%< <CR>
 " compile all buffers, but don't run them (C/C++)
 map <ESC><F8> :wa <CR> :silent bufdo !g++ -Wall -O % -o %< <CR> <C-L>
+" run program in the current buffer
+map <F5> :!./%< <CR>
 " Typos
 if has('user_commands')
     command! -bang -complete=file -nargs=? E e<bang> <args>
@@ -94,4 +96,8 @@ call vundle#rc()
 " let Vundle manage Vundle
 Bundle 'gmarik/vundle'
 " YouCompleteMe repo
+let g:ycm_confirm_extra_conf = 0
 Bundle 'Valloric/YouCompleteMe'
+" Syntastic repo
+let g:syntastic_full_redraws = 0 " fixes screen flicker
+Bundle 'scrooloose/syntastic'
