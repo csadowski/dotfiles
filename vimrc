@@ -51,9 +51,11 @@ autocmd InsertEnter * :setlocal nohlsearch
 autocmd InsertLeave * :setlocal hlsearch
 cmap w!! w !sudo tee >/dev/null %
 " compile and run current buffer (C/C++)
-map <F8> :w <CR> :!g++ -Wall -O % -o %< && ./%< <CR>
+map <F8> :w \| :!g++ -Wall -O % -o %< && ./%< <CR>
+" map <F8> :w <CR> :!g++ -Wall -O % -o %< && ./%< <CR> " this appears to cause
+" a race condition on newly-created files, e.g. vim file.cpp
 " compile all buffers, but don't run them (C/C++)
-map <ESC><F8> :wa <CR> :silent bufdo !g++ -Wall -O % -o %< <CR> <C-L>
+map <ESC><F8> :wa \| :silent bufdo !g++ -Wall -O % -o %< <CR> <C-L>
 " run program in the current buffer
 map <F5> :!./%< <CR>
 " Typos
