@@ -1,0 +1,126 @@
+In ~/.vim/plugin and/or ~/.vim/autoload, as appropriate:
+
+characterize.vim
+    -In Vim, pressing ga on a character reveals its representation in decimal,
+     octal, and hex.  Characterize.vim modernizes this with the following additions:
+
+    * Unicode character names: U+00A9 COPYRIGHT SYMBOL
+    * Vim digraphs (type after <C-K> to insert the character): Co, cO
+    * Emoji codes: :copyright:
+    * HTML entities: &copy; 
+
+commentary.vim
+    -Comment stuff out.  Use \\\ to comment out a line (takes a count), \\ to
+     comment out the target of a motion (for example, \\ap to comment out a
+     paragraph), and \\ in visual mode to comment out the selection.  That's it. 
+
+filebrowser.vim
+    -Came with the latex suite. Uncertain function.
+
+imaps.vim
+    -Came with the latex suite. Uncertain function.
+
+libList.vim
+    -Came with the latex suite. Uncertain function.
+
+minibufexpl.vim
+    -Provides visible buffers at the bottom of the screen when editing
+     multiple files. There are a growing number of optional features in
+     this script that are enabled by letting variables in your .vimrc:
+     
+    -ctrl + the vim direction keys [hjkl] can be made to move you between windows.
+    -ctrl + arrow keys can be made to do the same thing
+    -ctrl + tab & shift + ctrl + tab can be setup to switch through your open
+     windows (like in MS Windows)
+    -ctrl + tab & shift + ctrl + tab can alternatively be setup to cycle forwards
+     and backwards through your modifiable buffers in the current window
+
+remoteOpen.vim
+    -Came with the latex suite. Uncertain function.
+
+repeat.vim
+    -Allows custom functions/scripts to make use of "." if properly supported.
+     This currently includes, at least:
+
+     -abolish.vim (which we don't have presently)
+     -commentary.vim
+     -speeddating.vim
+     -surround.vim
+     -unimpaired.vim
+
+snipMate.vim
+    -snipMate.vim aims to be an unobtrusive, concise vim script that implements
+     some of TextMate's snippets features in Vim. A snippet is a piece of
+     often-typed text that you can insert into your document using a trigger
+     word followed by a <tab>. For instance, in a C file using the default
+     installation of snipMate.vim, if you type "for<tab>" in insert mode, it
+     will expand a typical for loop in C:
+
+    for (i = 0; i < count; i++) {
+
+    }
+
+    To go to the next item in the loop, simply <tab> over to it; if there is
+    repeated code, such as the "i" variable in this example, you can simply
+    start typing once it's highlighted and all the matches specified in the
+    snippet will be updated.
+    NOTE: remember to add ":filetype plugin on" to your .vimrc, otherwise
+    snippets will not work! 
+
+speeddating.vim
+    -Allows for intelligent date/time integer operations with Ctrl+{A,X}.
+
+surround.vim
+    -Surround.vim is all about "surroundings": parentheses, brackets,
+     quotes, XML tags, and more. The plugin provides mappings to easily
+     delete, change and add such surroundings in pairs.
+
+     Usage is a little complex, but centres primarily around the "cs"
+     keybinding, e.g. `cs"'` inside `"Hello World"` would change the "
+     to '. See the help for specific details.
+
+SyntaxFolds.vim
+    -Came with the latex suite. Seems to define syntax folding operations
+     to work more neatly with latex
+
+tbone.vim
+    -Allows vim to interact with the tmux pastebuffer.
+    * :Tmux lets you call any old tmux command (with really good tab complete).
+    * :Tyank and :Tput give you direct access to tmux buffers.
+    * :Twrite sends a chunk of text to another pane.  Give an argument like
+       windowtitle.2, top-right, or last, or let it default to the previously
+       given argument.
+    * :Tattach lets you use a specific tmux session from outside of it.
+
+unimpaired.vim
+    -Much of unimpaired.vim was extracted from my vimrc when I noticed a pattern:
+     complementary pairs of mappings.  They fall into three categories.
+     There are mappings which are simply short normal mode aliases for commonly
+     used ex commands. ]q is :cnext. [q is :cprevious. ]a is :next. [b is :bprevious.
+     See the documentation for the full set of 16 mappings and mnemonics.  All of
+     them take a count.
+
+     There are linewise mappings. [<Space> and ]<Space> add newlines before and after
+     the cursor line. [e and ]e exchange the current line with the one above
+     or below it.
+
+    There are mappings for encoding and decoding. [x and ]x encode and decode XML
+    (and HTML). [u and ]u encode and decode URLs. [y and ]y do C String style escaping.
+
+    Oh, and there's also [f and ]f to go to the previous/next file in the directory,
+    and [n and ]n to go between SCM conflict markers. 
+
+In ~/.vim/bundle:
+
+syntastic
+    -Syntastic is a syntax checking plugin that runs files through external syntax
+     checkers and displays any resulting errors to the user. This can be done on
+     demand, or automatically as files are saved. Works with YouCompleteMe.
+
+vundle
+    -Plugin mangement system; currently manages syntastic and YouCompleteMe.
+     Managed in ~/.vimrc. Use :BundleInstall to install/update defined bundles.
+
+YouCompleteMe
+    -YouCompleteMe is a fast, as-you-type, fuzzy-search code completion engine.
+     Requires clang and omnisharp-completer and works with syntastic.
