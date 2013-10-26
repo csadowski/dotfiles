@@ -50,7 +50,7 @@ URxvt.buffered: false
 URxvt.cursorBlink: on
 !depth and background are for transparency
 URxvt.depth: 32
-!URxvt.background: rgba:0000/0000/0200/c800
+URxvt.background: rgba:0000/0000/0200/c800
 !URxvt.fading: 40
 URxvt.font: xft:Ubuntu Mono:size=12:antialias=true:hinting=true, xft:Deja Vu Sans Mono,xft:Lohit Kannada
 URxvt.internalBorder: 0
@@ -65,7 +65,7 @@ URxvt.secondaryScroll: true
 URxvt.skipBuiltinGlyphs: true
 URxvt.urgentOnBell: true
 !fake transparency below
-URxvt.transparent: true
+!URxvt.transparent: true
 URxvt.shading: 30
 ! Enable clicking links to open them
 URxvt.perl-ext-common: default,matcher,-option-popup,-selection-popup,-realine
