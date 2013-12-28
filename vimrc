@@ -9,7 +9,9 @@ if has("autocmd")
     filetype plugin on
 endif
 set hidden
-set nu
+" Enable hybrid line numbers
+set number
+set relativenumber
 set wildmenu
 set wildmode=longest,list
 set wildignore+=*.a,*.o

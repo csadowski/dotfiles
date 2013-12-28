@@ -49,8 +49,8 @@ URxvt.termName: rxvt-256color
 URxvt.buffered: false
 URxvt.cursorBlink: on
 !depth and background are for transparency
-URxvt.depth: 32
-URxvt.background: rgba:0000/0000/0200/c800
+!URxvt.depth: 32
+!URxvt.background: rgba:0000/0000/0200/c800
 !URxvt.fading: 40
 URxvt.font: xft:Ubuntu Mono:size=12:antialias=true:hinting=true, xft:Deja Vu Sans Mono,xft:Lohit Kannada
 URxvt.internalBorder: 0
@@ -65,7 +65,7 @@ URxvt.secondaryScroll: true
 URxvt.skipBuiltinGlyphs: true
 URxvt.urgentOnBell: true
 !fake transparency below
-!URxvt.transparent: true
+URxvt.transparent: true
 URxvt.shading: 30
 ! Enable clicking links to open them
 URxvt.perl-ext-common: default,matcher,-option-popup,-selection-popup,-realine
@@ -78,7 +78,7 @@ URxvt.matcher.launcher.2: smplayer
 URxvt.matcher.pattern.3: \\bhttps?:\/\/[\\w-.]*\/[\\w./?&%@#-]*.(?i)(mp3|ogg|wav|wma|flv)
 URxvt.matcher.launcher.3: smplayer
 URxvt.matcher.pattern.4: \\bhttps?:\/\/[\\w-.]*\/[\\w./?&%@#-]*.(?i)(jpg|jpeg|png|gif|bmp)
-URxvt.matcher.launcher.4: animate
+URxvt.matcher.launcher.4: animate -resize 640x512 $0
 URxvt.matcher.pattern.5:  \\B(/\\S+?):(\\d+)(?=:|$)
 URxvt.matcher.launcher.5: gvim +$2 $1
 ! Fix ibus; remember to start with --xim
