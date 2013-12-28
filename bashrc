@@ -132,6 +132,9 @@ export LESS_TERMCAP_us=$(printf '\e[04;38;5;200m') # enter underline mode
 # Disable flow-control
 stty -ixon
 
+# Make ls, du, df, etc. print things in a nicer format by default
+export BLOCKSIZE=human-readable
+
 # Alias definitions.
 # You may want to put all your additions into a separate file like
 # ~/.bash_aliases, instead of adding them here directly.
