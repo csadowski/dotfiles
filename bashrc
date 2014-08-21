@@ -32,7 +32,7 @@ shopt -s checkwinsize
 # Make a grep a little more useful
 GREP_OPTIONS=
 for PATTERN in .cvs .git .hg .svn; do
-	GREP_OPTIONS="$GREP_OPTIONS --exclude-dir=$PATTERN --color"
+    GREP_OPTIONS="$GREP_OPTIONS --exclude-dir=$PATTERN --color"
 done
 export GREP_OPTIONS
 
@@ -42,17 +42,28 @@ shopt -s cdspell
 # zsh-style cd string replacement
 # If given two arguments to cd, replace the first with the second in $PWD,
 function cd {
-    while getopts lPe opt
-    do
-        local opts="$opts -$opt"
-    done
-    shift $(($OPTIND-1))
-    if [[ -n "$2" ]]; then
-        builtin cd $opts "${PWD/$1/$2}"
-    elif [[ -n "$1" ]]; then
-        builtin cd $opts "$1"
+while getopts lPe opt
+do
+    local opts="$opts -$opt"
+done
+shift $(($OPTIND-1))
+if [[ -n "$2" ]]; then
+    builtin cd $opts "${PWD/$1/$2}"
+elif [[ -n "$1" ]]; then
+    builtin cd $opts "$1"
+else
+    builtin cd $opts
+fi
+}
+
+function swap()
+{
+    if [ ! -z "$2" ] && [ -e "$1" ] && [ -e "$2" ] && ! [ "$1" -ef "$2" ] && (([ -f "$1" ] && [ -f "$2" ]) || ([ -d "$1" ] && [ -d "$2" ])) ; then
+        tmp=$(mktemp -d $(dirname "$1")/XXXXXX)
+        mv "$1" "$tmp" && mv "$2" "$1" &&  mv "$tmp"/"$1" "$2"
+        rmdir "$tmp"
     else
-        builtin cd $opts
+        echo "Usage: swap file1 file2 or swap dir1 dir2"
     fi
 }
 
@@ -82,19 +93,19 @@ force_color_prompt=yes
 
 if [ -n "$force_color_prompt" ]; then
     if [ -x /usr/bin/tput ] && tput setaf 1 >&/dev/null; then
-	# We have color support; assume it's compliant with Ecma-48
-	# (ISO/IEC-6429). (Lack of such support is extremely rare, and such
-	# a case would tend to support setf rather than setaf.)
-	color_prompt=yes
+        # We have color support; assume it's compliant with Ecma-48
+        # (ISO/IEC-6429). (Lack of such support is extremely rare, and such
+        # a case would tend to support setf rather than setaf.)
+        color_prompt=yes
     else
-	color_prompt=
+        color_prompt=
     fi
 fi
 
 # Adding jobs counter and turning on prompt variables
 prompt_jobs() {
-	    [[ -n "$(jobs)" ]] && printf '[%d]' $(jobs | sed -n '$=')
-    }
+    [[ -n "$(jobs)" ]] && printf '[%d]' $(jobs | sed -n '$=')
+}
 shopt -s promptvars
 if [ "$color_prompt" = yes ]; then
     #PS1='${debian_chroot:+($debian_chroot)}\[\033[01;32m\]\u@\h\[\033[00m\]:\[\033[01;34m\]\w\[\033[00m\]\$ ' # Original
@@ -107,17 +118,17 @@ unset color_prompt force_color_prompt
 
 # If this is an xterm set the title to user@host:dir
 case "$TERM" in
-xterm*|rxvt*)
-    PS1="\[\e]0;${debian_chroot:+($debian_chroot)}\u@\h: \w\a\]$PS1"
-    ;;
-*)
-    ;;
+    xterm*|rxvt*)
+        PS1="\[\e]0;${debian_chroot:+($debian_chroot)}\u@\h: \w\a\]$PS1"
+        ;;
+    *)
+        ;;
 esac
 
 # Enable 256-color mode
 
 case "$TERM" in
-	xterm*) TERM=xterm-256color
+    xterm*) TERM=xterm-256color
 esac
 
 # Colourful man pages
@@ -173,11 +184,11 @@ function vim-writer { vim -c 'set tw=72 et' '+/^$' --cmd 'set spell spelllang=en
 function gvim-writer { gvim -c 'set tw=72 et' '+/^$' --cmd 'set spell spelllang=en_gb' -c 'set formatoptions+=aw' "$@" ;}
 # Attach to existing tmux session rather than create a new one if possible.
 function tmux {
-    if [[ -n "$*" ]]; then
-        command tmux $*
-    else
-        command tmux attach -d &>/dev/null || command tmux
-    fi
+if [[ -n "$*" ]]; then
+    command tmux $*
+else
+    command tmux attach -d &>/dev/null || command tmux
+fi
 }
 
 # enable programmable completion features (you don't need to enable
