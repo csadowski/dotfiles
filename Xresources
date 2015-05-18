@@ -1,10 +1,11 @@
+! Use the below paragraph with awesome
 ! Cursor
-Xcursor.theme: DMZ-Black
+!Xcursor.theme: DMZ-Black
 ! Fonts
-Xft.antialias: 1
-Xft.hinting: -1
-Xft.hintstyle: hintnone
-Xft.rgba: none
+!Xft.antialias: 1
+!Xft.hinting: -1
+!Xft.hintstyle: hintnone
+!Xft.rgba: none
 
 ! Common terminal colors
 ! black
@@ -44,6 +45,252 @@ Xft.rgba: none
 ! white
 *.color15: #FFFFFF
 
+! Derp colour scheme
+! *.background: #000000
+! *.foreground: #AAAAAA
+! ! Black
+! *color0:   #111111
+! *color8:   #666666
+
+! ! Red
+! *color1:   rgb:d3/62/65
+! *color9:   rgb:ef/81/71
+
+! ! Green
+! *color2:   #aece91
+! *color10:  #cfefb3
+
+! ! Yellow
+! *color3:   rgb:e7/e1/8c
+! *color11:  rgb:ff/f7/96
+
+! ! Blue
+! *color4:   #5297cf
+! *color12:  #74b8ef
+
+! ! Magenta
+! *color5:   #963c59
+! *color13:  #b85e7b
+
+! ! Cyan
+! *color6:   #5E7175
+! *color14:  #A3BABF
+
+! ! White
+! *color7:   #bebebe
+! *color15:  #ffffff
+
+! Deafened colour scheme
+! *.background: #000000
+! *.foreground: #AAAAAA
+! *color0:           #3d3e3d
+! *color8:           #5a5b5c
+
+! *color1:           #755a5b
+! *color9:           #a37679
+
+! *color2:           #68755a
+! *color10:          #87a376
+
+! *color3:           #756e5a
+! *color11:          #a39b76
+
+! *color4:           #5b6976
+! *color12:          #758ba3
+
+! *color5:           #755b76
+! *color13:          #9f76a3
+
+! *color6:           #465457
+! *color14:          #899ca1
+
+! *color7:           #ccccc6
+! *color15:          #f8f8f2
+
+! Digerati colour scheme
+! *.background: #000000
+! *.foreground: #AAAAAA
+! ! Black
+! *color0:   #303030
+! *color8:   #5F5F5F
+
+! ! Red
+! *color1:   #c03000
+! *color9:   #FF3A78
+
+! ! Green
+! *color2:   #b1d631
+! *color10:  #A6CD07
+
+! ! Yellow
+! *color3:   #fecf35
+! *color11:  #B5C865
+
+! ! Blue
+! *color4:   #426870
+! *color12:  #4A7781
+
+! ! Magenta
+! *color5:   #6D506D
+! *color13:  #FF3B77
+
+! ! Cyan
+! *color6:   #4bb5c1
+! *color14:  #4bb5c1
+
+! ! White
+! *color7:   #e2e2e5
+! *color15:  #e2e2e5
+
+! Insignificato colour scheme
+! *.background: #000000
+! *.foreground: #AAAAAA
+! !Black
+! *color0:           #3d3e3d
+! *color8:           #5a5b5c
+! !Red
+! *color1:           #755a5b
+! *color9:           #a37679
+! !Green
+! *color2:           #68755a
+! *color10:          #87a376
+! !Yellow
+! *color3:           #756e5a
+! *color11:          #a39b76
+! !Blue
+! *color4:           #5b6976
+! *color12:          #758ba3
+! !Magenta
+! *color5:           #755b76
+! *color13:          #9f76a3
+! !Cyan
+! *color6:           #5b7674
+! *color14:          #75a3a1
+! !White
+! *color7:           #808080
+! *color15:          #aeafb0
+
+! jwr-dark colour scheme
+! *.background: #000000
+! *.foreground: #AAAAAA
+! ! Black
+! *color0:   #333333
+! *color8:   #3D3D3D
+
+! ! Red
+! *color1:   #8C4665
+! *color9:   #BF4D80
+
+! ! Green
+! *color2:   #287373
+! *color10:  #53A6A6
+
+! ! Yellow
+! *color3:   #7C7C99
+! *color11:  #9E9ECB
+
+! ! Blue
+! *color4:   #395573
+! *color12:  #477AB3
+
+! ! Magneta
+! *color5:   #5E468C
+! *color13:  #7E62B3
+
+! ! Cyan
+! *color6:   #31658C
+! *color14:  #6096BF
+
+! ! White
+! *color7:   #899CA1
+! *color15:  #C0C0C0
+! !!NumiX Darkest.
+! !!BY WuX 
+
+! *background: #282828
+! *foreground: #A2A2A2
+
+! !Black
+! *color0:    #555555
+! *color8:    #888888
+
+! !Red
+! *color1:    #9C3528
+! *color9:    #d64937
+
+! !Green
+! *color2:    #61BC3B
+! *color10:   #86DF5D
+
+! !yellow
+! *color3:    #F3B43A
+! *color11:   #FDD75A
+
+! !blue
+! *color4:    #0D68A8
+! *color12:   #0F75BD
+
+! !Magenta
+! *color5:    #744560
+! *color13:   #9E5E83
+
+! !Cyan
+! *color6:    #288e9c
+! *color14:   #37c3d6
+
+! !White
+! *color7:    #A2A2A2
+! *color15:   #f9f9f9
+
+! Zenburn
+! *.background: #000000
+! *.foreground: #AAAAAA
+! *color0:  #1E2320
+! *color1:  #705050
+! *color2:  #60b48a
+! *color3:  #dfaf8f
+! *color4:  #506070
+! *color5:  #dc8cc3
+! *color6:  #8cd0d3
+! *color7:  #dcdccc
+! *color8:  #709080
+! *color9:  #dca3a3
+! *color10: #c3bf9f
+! *color11: #f0dfaf
+! *color12: #94bff3
+! *color13: #ec93d3
+! *color14: #93e0e3
+! *color15: #ffffff
+
+!Gutterslob Visiblue
+! urxvt*background:           #000000
+! urxvt*foreground:           #666699
+
+! !Visiblue
+! urxvt*color0:               #333366
+! urxvt*color8:               #333399
+
+! urxvt*color1:               #6666CC
+! urxvt*color9:               #9999FF
+
+! urxvt*color2:               #0099CC
+! urxvt*color10:              #00CCFF
+
+! urxvt*color3:               #3366CC
+! urxvt*color11:              #6699FF
+
+! urxvt*color4:               #006699
+! urxvt*color12:              #0099CC
+
+! urxvt*color5:               #0066FF
+! urxvt*color13:              #0099FF
+
+! urxvt*color6:               #669999
+! urxvt*color14:              #66CCCC
+
+! urxvt*color7:               #99CCCC
+! urxvt*color15:              #CCFFFF
+
 ! Urxvt
 URxvt.termName: rxvt-256color
 URxvt.buffered: false
@@ -66,27 +313,37 @@ URxvt.skipBuiltinGlyphs: true
 URxvt.urgentOnBell: true
 !fake transparency below
 URxvt.transparent: true
-URxvt.shading: 30
+! Need more shading for Kurisumasu theme
+URxvt.shading: 15
+!URxvt.shading: 30
 ! Enable clicking links to open them
 URxvt.perl-ext-common: default,matcher,-option-popup,-selection-popup,-realine
 URxvt.matcher.button: 2
-URxvt.urlLauncher: firefox
+URxvt.urlLauncher: palemoon
 URxvt.matcher.pattern.1: \\b(mailto:)[\\w\-\@;\/?:&=%\$_.+!*\x27(),~#]+ [\\w\-\@;\/?:&=%\$_+!*\x27()~]
 URxvt.matcher.launcher.1: urxvt -e mutt $0
 URxvt.matcher.pattern.2: \\bhttps?:\/\/(?:(?:www.youtube|youtube).com\/watch\\?.*v=|youtu.be/)([\\w-]*)
 URxvt.matcher.launcher.2: smplayer 
 URxvt.matcher.pattern.3: \\bhttps?:\/\/[\\w-.]*\/[\\w./?&%@#-]*.(?i)(mp3|ogg|wav|wma|flv)
 URxvt.matcher.launcher.3: smplayer
-URxvt.matcher.pattern.4: \\bhttps?:\/\/[\\w-.]*\/[\\w./?&%@#-]*.(?i)(jpg|jpeg|png|gif|bmp)
-URxvt.matcher.launcher.4: animate -resize 640x512 $0
-URxvt.matcher.pattern.5:  \\B(/\\S+?):(\\d+)(?=:|$)
-URxvt.matcher.launcher.5: gvim +$2 $1
+!URxvt.matcher.pattern.4: \\bhttps?:\/\/[\\w-.]*\/[\\w./?&%@#-]*.(?i)(jpg|jpeg|png|gif|bmp)
+!URxvt.matcher.launcher.4: animate -resize 640x512 $0
+URxvt.matcher.pattern.4:  \\B(/\\S+?):(\\d+)(?=:|$)
+URxvt.matcher.launcher.4: gvim +$2 $1
 ! Fix ibus; remember to start with --xim
 URxvt.inputMethod: ibus
 URxvt.preeditType: OverTheSpot
+! Xterm
+XTerm*locale: true
+XTerm*metaSendsEscape: true
+Xterm*saveLines: 4096
+xterm*faceName: Ubuntu Mono:size=12:antialias=true:hinting=true
+
 ! yeahconsole stuff
 yeahconsole.term: urxvtc
+!yeahconsole.term: xterm
 yeahconsole.screenWidth: 1280
+!yeahconsole*faceName: Ubuntu Mono:size=12:antialias=true:hinting=true
 ! guake was big enough to show 31 vim lines, albeit with a bigger font; 34 is half the screen at this font
 yeahconsole.consoleHeight: 34
 ! yeahconsole.xOffset: 1280
@@ -115,6 +372,8 @@ xscreensaver.Dialog.shadowThickness:        2
 xscreensaver.Dialog.logo.width:             0
 xscreensaver.Dialog.logo.height:            0
 xscreensaver.passwd.thermometer.foreground: #535d6c
+!winter foreground
+!xscreensaver.passwd.thermometer.foreground: #8dacfb
 xscreensaver.passwd.thermometer.background: #000000
 xscreensaver.passwd.thermometer.width:      12
 !xscreensaver.dateFormat:                    %I:%M%P %a %b %d, %Y

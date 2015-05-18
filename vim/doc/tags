@@ -69,6 +69,8 @@ ResetSnippets()	snipMate.txt	/*ResetSnippets()*
 [xx	unimpaired.txt	/*[xx*
 [y	unimpaired.txt	/*[y*
 [yy	unimpaired.txt	/*[yy*
+\\	commentary.txt	/*\\\\*
+\\\	commentary.txt	/*\\\\\\*
 ]<C-L>	unimpaired.txt	/*]<C-L>*
 ]<C-Q>	unimpaired.txt	/*]<C-Q>*
 ]<Space>	unimpaired.txt	/*]<Space>*
@@ -94,6 +96,7 @@ ResetSnippets()	snipMate.txt	/*ResetSnippets()*
 characterize	characterize.txt	/*characterize*
 characterize-ga	characterize.txt	/*characterize-ga*
 characterize.txt	characterize.txt	/*characterize.txt*
+commentary.txt	commentary.txt	/*commentary.txt*
 cs	surround.txt	/*cs*
 ds	surround.txt	/*ds*
 g:snippets_dir	snipMate.txt	/*g:snippets_dir*
@@ -104,6 +107,9 @@ i_CTRL-R_<Tab>	snipMate.txt	/*i_CTRL-R_<Tab>*
 list-snippets	snipMate.txt	/*list-snippets*
 minibufexpl.txt	minibufexpl.txt	/*minibufexpl.txt*
 multi_snip	snipMate.txt	/*multi_snip*
+ps1-about	ps1.txt	/*ps1-about*
+ps1-syntax	ps1.txt	/*ps1-syntax*
+ps1.txt	ps1.txt	/*ps1.txt*
 snipMate	snipMate.txt	/*snipMate*
 snipMate-$#	snipMate.txt	/*snipMate-$#*
 snipMate-${#:}	snipMate.txt	/*snipMate-${#:}*
@@ -145,6 +151,13 @@ surround-mappings	surround.txt	/*surround-mappings*
 surround-replacements	surround.txt	/*surround-replacements*
 surround-targets	surround.txt	/*surround-targets*
 surround.txt	surround.txt	/*surround.txt*
+swap-custom-mappings	swap.txt	/*swap-custom-mappings*
+swap-custom-ops	swap.txt	/*swap-custom-ops*
+swap-normal	swap.txt	/*swap-normal*
+swap-operators	swap.txt	/*swap-operators*
+swap-repeat	swap.txt	/*swap-repeat*
+swap-visual	swap.txt	/*swap-visual*
+swap.txt	swap.txt	/*swap.txt*
 tbone	tbone.txt	/*tbone*
 tbone-:Tattach	tbone.txt	/*tbone-:Tattach*
 tbone-:Tmux	tbone.txt	/*tbone-:Tmux*
@@ -163,6 +176,7 @@ v_[e	unimpaired.txt	/*v_[e*
 v_[u	unimpaired.txt	/*v_[u*
 v_[x	unimpaired.txt	/*v_[x*
 v_[y	unimpaired.txt	/*v_[y*
+v_\\	commentary.txt	/*v_\\\\*
 v_]e	unimpaired.txt	/*v_]e*
 v_]u	unimpaired.txt	/*v_]u*
 v_]x	unimpaired.txt	/*v_]x*
