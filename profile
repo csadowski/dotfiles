@@ -34,7 +34,7 @@ MAILPATH=~/mail/inbox:~/mail/student-mail:~/mail/ubuntu-power-users && export MA
 
 # Browser
 if [ -n "$DISPLAY" ]; then
-    export BROWSER='firefox'
+    export BROWSER='palemoon'
 else
     export BROWSER='w3m'
 fi
