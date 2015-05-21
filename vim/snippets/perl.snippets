@@ -1,7 +1,117 @@
-# #!/usr/bin/perl
+# #!/usr/bin/env perl
 snippet #!
+	#!/usr/bin/env perl
+
+	use warnings;
+	use strict;
+
+
+snippet template
 	#!/usr/bin/perl
+
+	# Force me to write this properly
+
+	use strict;
+	use warnings;
+
+	# Modules
+
+	use Carp;                                       # Built-in
+	use English qw(-no_match_vars);                 # Built-in
+	use Getopt::Long qw(:config no_ignore_case);    # Built-in
+	use Pod::Usage;                                 # Built-in
 	
+	## no critic (RequireLocalizedPunctuationVars)
+	BEGIN {
+		$ENV{Smart_Comments} = " @ARGV " =~ /--debug/xms;
+	}
+	use Smart::Comments -ENV;                       # cpanm Smart::Comments
+
+	our $VERSION = 0.1;
+
+		GetOptions(
+		'help|h'  => \my $help,
+		'debug'   => \my $debug,                    # dummy variable
+		'man'     => \my $man,
+		'version' => \my $version,
+
+	) or pod2usage( -verbose => 0 );
+
+	if ($help) {
+		pod2usage( -verbose => 0 );
+	}
+	if ($man) {
+		pod2usage( -verbose => 2 );
+	}
+	if ($version) {
+		die "$PROGRAM_NAME v$VERSION\n";
+	}
+
+	use Fcntl ':flock';
+
+	open my $SELF, '<', $PROGRAM_NAME or croak "Program already running\n";
+	flock $SELF, LOCK_EX | LOCK_NB or exit;
+	close $SELF or croak $ERRNO;
+
+	__END__
+
+	=pod Changelog
+
+	=begin comment
+
+	Changelog:
+
+	TBD
+
+	=end comment
+
+	=cut
+
+	# Documentation
+	=pod
+
+	=head1 NAME
+
+	Program - Does Stuff
+
+	=head1 USAGE
+
+		perl program.pl     [OPTION...]
+		-h, --help          Display this help text
+			--man           Displays the full embedded manual
+			--version       Displays the version and then exits
+
+	=head1 DESCRIPTION
+
+	=head1 REQUIRED ARGUMENTS
+
+	=head1 OPTIONS
+
+	=head1 DIAGNOSTICS
+
+	=head1 EXIT STATUS
+
+	=head1 CONFIGURATION
+
+	=head1 DEPENDENCIES
+
+	=head1 INCOMPATIBILITIES
+	
+	=head1 BUGS AND LIMITATIONS
+
+	None known.
+
+	Report any bugs found to either the author or to the SmartSystems support
+	account, <support@smartsystemsaz.com>
+
+	=head1 AUTHOR
+
+	Cory Sadowski <cory@smartsystemsaz.com>
+
+	=head1 LICENSE AND COPYRIGHT
+
+	=cut
+
 # Hash Pointer
 snippet .
 	 =>
