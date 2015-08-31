@@ -1,11 +1,11 @@
 ! Use the below paragraph with awesome
 ! Cursor
-!Xcursor.theme: DMZ-Black
+Xcursor.theme: DMZ-Black
 ! Fonts
-!Xft.antialias: 1
-!Xft.hinting: -1
-!Xft.hintstyle: hintnone
-!Xft.rgba: none
+Xft.antialias: 1
+Xft.hinting: -1
+Xft.hintstyle: hintnone
+Xft.rgba: none
 
 ! Common terminal colors
 ! black

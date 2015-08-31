@@ -108,6 +108,7 @@ set grepprg=grep\ -nH\ $*
 let g:tex_flavor='latex'
 let g:Tex_DefaultTargetFormat = 'pdf'
 let g:Tex_MultipleCompileFormats='pdf, aux'
+au BufWritePost *.tex silent call Tex_RunLaTeX()
 " vundle stuff
 "set rtp+=~/.vim/bundle/vundle/
 "call vundle#rc()
@@ -120,6 +121,10 @@ let g:ycm_confirm_extra_conf = 0
 let g:syntastic_full_redraws = 0 " fixes screen flicker
 let g:syntastic_perl_perlcritic_args = '--brutal'
 let g:syntastic_always_populate_loc_list = 1
+let g:syntastic_check_on_open = 1
+let g:syntastic_check_on_wq = 0
+let g:syntastic_perl_checkers  = ["perl", "perlcritic"]
+let g:syntastic_enable_perl_checker = 1
 nnoremap <F2> :lprev<cr>
 nnoremap <F3> :lnext<cr>
 "Bundle 'scrooloose/syntastic'
@@ -165,3 +170,6 @@ function SetLocalOptions(fname)
 endfunction
 
 au BufNewFile,BufRead * call SetLocalOptions(bufname("%"))
+
+" GVim
+set guioptions-=T " Disables toolbar

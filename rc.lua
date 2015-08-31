@@ -263,11 +263,13 @@ end),
 awful.key({ modkey,           }, "Return", function () awful.util.spawn(terminal) end),
 awful.key({ modkey, "Control" }, "r", awesome.restart),
 awful.key({ modkey, "Shift"   }, "q", awesome.quit),
-awful.key({}, "#122", function () awful.util.spawn("amixer -c 1 set -- PCM playback 5%-") end),
-awful.key({}, "#123", function () awful.util.spawn("amixer -c 1 set -- PCM playback 5%+") end),
-awful.key({}, "#121", function () awful.util.spawn("amixer -c 1 set -- PCM playback toggle") end), 
+awful.key({}, "XF86AudioRaiseVolume", function () awful.util.spawn("amixer -D pulse sset Master 5%+") end),
+awful.key({}, "XF86AudioLowerVolume", function () awful.util.spawn("amixer -D pulse sset Master 5%-") end),
+-- awful.key({}, "#122", function () awful.util.spawn("amixer -c 1 set -- PCM playback 5%-") end),
+-- awful.key({}, "#123", function () awful.util.spawn("amixer -c 1 set -- PCM playback 5%+") end),
+-- awful.key({}, "#121", function () awful.util.spawn("amixer -c 1 set -- PCM playback toggle") end), 
 awful.key({}, "#163", function () awful.util.spawn_with_shell(terminal .. " -e mutt") end),
-awful.key({}, "#164", function () awful.util.spawn("pcmanfm") end),
+awful.key({}, "#164", function () awful.util.spawn("spacefm") end),
 awful.key({ "Mod1"            }, "#164", function () awful.util.spawn("gksudo synaptic") end),
 awful.key({}, "#180", function () awful.util.spawn("firefox") end),
 awful.key({ modkey,           }, "#172", function () awful.util.spawn("mocp -p") end),
@@ -411,7 +413,7 @@ awful.rules.rules = {
     properties = { size_hints_honor = false } },
     { rule = { class = "Pale moon" },
     properties = { tag = tags[1][1] } },
-    { rule = { class = "Pcmanfm" },
+    { rule = { class = "Spacefm" },
     properties = { tag = tags[1][4] } },
     -- Set Firefox to always map on tags number 2 of screen 1.
     -- { rule = { class = "Firefox" },
@@ -500,7 +502,8 @@ run_once("gnote")
 run_once("parcellite")
 run_once("ibus-daemon --xim")
 run_once("nm-applet")
-run_once("volti")
+--run_once("volti")
+run_once("pasystray")
 run_once("xscreensaver -no-splash")
-run_once("update-notifier")
+--run_once("update-notifier")
 -- }}}}

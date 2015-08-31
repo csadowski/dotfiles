@@ -19,7 +19,7 @@ export HISTTIMEFORMAT='%F %T '
 
 # Store history immediately but ignore certain commands
 PROMPT_COMMAND='history -a; history -n'
-HISTIGNORE='bg:clear:exit:fg:history'
+HISTIGNORE='bg:clear:exit:fg:history:pass'
 
 # for setting history length see HISTSIZE and HISTFILESIZE in bash(1)
 unset HISTFILESIZE
@@ -175,7 +175,7 @@ export GCC_COLORS='error=01;31:warning=01;35:note=01;36:caret=01;32:locus=01:quo
 #alias la='ls -A'
 #alias l='ls -CF'
 alias bc='bc -l'
-alias upgrade='sudo apt-get update ; sudo apt-get upgrade'
+alias upgrade='sudo apt-get update ; sudo apt-get dist-upgrade ; sudo apt-get autoremove'
 alias whatismyip='curl -s "http://checkip.dyndns.org" | sed "s/.*Current IP Address: \([0-9\.]*\).*/\1/g"'
 alias randomfact='wget randomfunfacts.com -O - 2>/dev/null | grep \<strong\> | sed "s;^.*<i>\(.*\)</i>.*$;\1;"'
 alias rhombus='kevedit /home/cory/.wine/drive_c/DOS/ZZT/RHOMBUS'
