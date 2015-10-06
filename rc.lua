@@ -105,7 +105,7 @@ myawesomemenu = {
    { "manual", terminal .. " -e man awesome" },
    { "edit config", editor_cmd .. " " .. awesome.conffile },
    { "reload config", awesome.restart },
-   { "quit", awesome.quit },
+   { "switch users", "dm-tool switch-to-greeter" },
    { "suspend PC", "suspend-via-dbus.sh" },
    { "reboot PC" , "gksudo reboot" },
    { "shutdown PC" , "gksudo shutdown -h now" }
@@ -113,7 +113,8 @@ myawesomemenu = {
 
 mymainmenu = awful.menu({ items = { { "awesome", myawesomemenu, beautiful.awesome_icon },
                                     { "Debian", debian.menu.Debian_menu.Debian },
-                                    { "open terminal", terminal }
+                                    { "open terminal", terminal },
+                                    { "quit", awesome.quit },
                                   }
                         })
 
@@ -329,6 +330,7 @@ awful.key({ modkey, "Control" }, "space",  awful.client.floating.toggle         
 awful.key({ modkey, "Control" }, "Return", function (c) c:swap(awful.client.getmaster()) end),
 awful.key({ modkey,           }, "o",      awful.client.movetoscreen                        ),
 awful.key({ modkey,           }, "t",      function (c) c.ontop = not c.ontop            end),
+awful.key({ modkey,           }, "s",      function (c) c.sticky = not c.sticky  end),
 awful.key({ modkey,           }, "n",
 function (c)
     -- The client currently has the input focus, so it cannot be
